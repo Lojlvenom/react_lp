@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Lojlvenom/react_lp#readme",
   "dependencies": {
-    "create-react-app": "^5.0.0"
+    "create-react-app": "^5.0.0",
+    "react-scroll": "^1.8.4"
   }
 }

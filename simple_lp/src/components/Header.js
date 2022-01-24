@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import SortIcon from '@material-ui/icons/Sort'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { useEffect, useState } from 'react';
+import { Link as Scroll } from 'react-scroll'
+
 const useStyles = makeStyles((theme) => ({
  root:{
      display: 'flex',
@@ -51,7 +53,7 @@ function Header() {
       setChecked(true);
   }, [])
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="header">
       <AppBar className={classes.appbar} elevation={0}>
           <Toolbar className={classes.appbarWrapper}>
           <h1 className={classes.appbarTittle}>My <span className={classes.colorText}>
@@ -69,12 +71,13 @@ function Header() {
         <h1 className={classes.title}> Welcome to <br/>
             My <span className={classes.colorText}>Isle</span>
             </h1>
+            <Scroll to="place-to-visit" smooth={true}>
             <IconButton>
           <ExpandMoreIcon className={classes.goDownIcon} />
           </IconButton>
+          </Scroll>
       </div>
       </Collapse>
-
     </div>
     
   );
